@@ -1,7 +1,8 @@
 import React from "react";
+import "./../App.css"
 function Coin(props){
     return (
-        <li>
+        <li className="coin">
             {props.children}
         </li>
     )

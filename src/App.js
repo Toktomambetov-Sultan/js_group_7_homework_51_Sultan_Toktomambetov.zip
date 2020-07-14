@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import random from "./functions/random"
 import Coin from './components/coin';
+import "./App.css"
 
 class App extends Component {
   state = {
@@ -29,11 +30,11 @@ class App extends Component {
   }
   render() {
     return (
-      <div className="App">
-        <button onClick={this.getNewCoin}>
+      <div className="container App">
+        <button onClick={this.getNewCoin} className="btn">
           new numbers
         </button>
-        <ul>
+        <ul className="list">
           {this.state.coins.map(coin => (<Coin key={coin.toString()}>{String(coin)}</Coin>))}
         </ul>
       </div>
